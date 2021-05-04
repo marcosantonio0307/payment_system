@@ -1,0 +1,30 @@
+require:
+
+  - 'rubocop'
+
+AllCops:
+
+ TargetRubyVersion: 2.7.2
+
+ NewCops: enable
+
+ Exclude:
+
+   - 'executed_files/**/*'
+   - 'processing_files/**/*'
+   - 'return_files/**/*'
+   - 'spec/spec_helper.rb'
+
+Style/AsciiComments:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+Style/Documentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+ Enabled: false
+Metrics/BlockLength:
+ IgnoredMethods: ['describe', 'context', 'it']
+Metrics/ClassLength:
+  Exclude:
+    - 'spec/**/*'
